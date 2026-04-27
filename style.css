@@ -1,94 +1,149 @@
+/* ==========================================
+   GLOBAL RESET
+   Ensures consistent box sizing across all elements
+========================================== */
 * {
   box-sizing: border-box;
 }
 
+/* ==========================================
+   BODY / BASE STYLING
+========================================== */
 body {
-  margin: 0;
+  margin: 0; /* Remove default browser margin */
   font-family: Arial, Helvetica, sans-serif;
-  background: #0f172a;
-  color: #e5e7eb;
+  background: #0f172a; /* Dark navy background */
+  color: #e5e7eb; /* Light text color */
 }
 
+/* ==========================================
+   MAIN HERO CONTAINER
+   Centers content and constrains width
+========================================== */
 .hero {
-  min-height: 100vh;
-  padding: 80px 24px;
-  max-width: 1000px;
-  margin: 0 auto;
+  min-height: 100vh; /* Full viewport height */
+  padding: 80px 24px; /* Top/bottom + side spacing */
+  max-width: 1000px; /* Keeps content from stretching too wide */
+  margin: 0 auto; /* Centers horizontally */
 }
 
+/* ==========================================
+   BADGE (Arc Nexus HQ pill at top)
+   Combined into ONE definition (removed duplicate)
+========================================== */
 .badge {
-  display: inline-block;
+  display: inline-flex; /* Align icon + text horizontally */
+  align-items: center;
+  gap: 8px; /* Space between icon and text */
+
   padding: 8px 14px;
   border: 1px solid #334155;
-  border-radius: 999px;
+  border-radius: 999px; /* Pill shape */
   color: #93c5fd;
+
   margin-bottom: 24px;
 }
 
-.badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-
+/* Badge icon */
 .badge img {
   width: 18px;
   height: 18px;
+  object-fit: cover; /* Prevent stretching */
+  border-radius: 4px;
+  flex-shrink: 0; /* Prevent shrinking */
 }
 
+/* ==========================================
+   MAIN HEADLINE
+========================================== */
 h1 {
-  font-size: clamp(2.5rem, 7vw, 5rem);
+  font-size: clamp(2.5rem, 7vw, 5rem); /* Responsive scaling */
   line-height: 1;
   margin: 0 0 24px;
 }
 
+/* ==========================================
+   HERO DESCRIPTION TEXT
+========================================== */
 .hero > p {
   font-size: 1.25rem;
   line-height: 1.6;
   color: #cbd5e1;
-  max-width: 720px;
+  max-width: 720px; /* Keeps text readable */
 }
 
+/* ==========================================
+   CARD GRID LAYOUT
+========================================== */
 .cards {
   display: grid;
+
+  /* Responsive layout:
+     - 1 column on small screens
+     - Expands to multiple columns automatically */
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 18px;
+
+  gap: 18px; /* Space between cards */
   margin-top: 48px;
 }
 
-.card {
-  cursor: pointer;
-  transition: transform 0.15s ease, border 0.15s ease;
-}
-
-.card-header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 10px;
-}
-
-.card-header img {
-  width: 36px;
-  height: 36px;
-  border-radius: 8px;
-}
-.card:hover {
-  transform: translateY(-4px);
-  border-color: #38bdf8;
-}
+/* ==========================================
+   INDIVIDUAL CARD
+========================================== */
 .card {
   background: #1e293b;
   border: 1px solid #334155;
   border-radius: 18px;
   padding: 24px;
+
+  cursor: pointer;
+
+  /* Smooth hover animation */
+  transition: transform 0.15s ease, border 0.15s ease;
 }
 
+/* Hover effect */
+.card:hover {
+  transform: translateY(-4px); /* Lift effect */
+  border-color: #38bdf8; /* Highlight border */
+}
+
+/* ==========================================
+   CARD HEADER (icon + title)
+========================================== */
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Space between icon and title */
+  margin-bottom: 10px;
+}
+
+/* Card icon */
+.card-header img {
+  width: 36px;
+  height: 36px;
+  object-fit: cover; /* Prevent distortion */
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+/* ==========================================
+   CARD TEXT STYLING
+========================================== */
 .card h2 {
-  margin-top: 0;
+  margin-top: 0; /* Remove default spacing */
 }
 
 .card p {
   color: #cbd5e1;
   line-height: 1.5;
+}
+
+/* ==========================================
+   GLOBAL IMAGE SAFETY NET
+   Prevents ANY image from blowing up full screen
+========================================== */
+img {
+  max-width: 100%;
+  height: auto;
 }
