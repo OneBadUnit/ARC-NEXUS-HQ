@@ -25,6 +25,16 @@ body {
   margin-bottom: 24px;
 }
 
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.badge img {
+  width: 18px;
+  height: 18px;
+}
 h1 {
   font-size: clamp(2.5rem, 7vw, 5rem);
   line-height: 1;
