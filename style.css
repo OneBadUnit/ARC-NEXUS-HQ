@@ -37,8 +37,8 @@ body {
 }
 
 .brand img {
-  width: 128px;
-  height: 128px;
+  width: 164px;
+  height: 164px;
   object-fit: cover;
   border-radius: 10px;
   flex-shrink: 0;
@@ -123,8 +123,8 @@ h1 {
 
 /* Default small card icon */
 .card-header img {
-  width: 48px;
-  height: 48px;
+  width: 36px;
+  height: 36px;
   object-fit: cover;
   border-radius: 8px;
   flex-shrink: 0;
