@@ -1,42 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <link rel="icon" type="image/png" href="assests/assets/logo.png">
 
-<img src="assests/assets/logo.png">
-<img src="assests/assets/photogather.png">
+<head>
+  <!-- ==========================================
+       META / PAGE SETUP
+  ========================================== -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Page title (browser tab name) -->
   <title>Arc Nexus</title>
+
+  <!-- ==========================================
+       FAVICON (tab icon)
+       IMPORTANT: path matches your current repo structure
+       assests/assets/logo.png
+  ========================================== -->
+  <link rel="icon" type="image/png" href="assests/assets/logo.png">
+
+  <!-- Main stylesheet -->
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+
+  <!-- ==========================================
+       MAIN HERO SECTION
+       This is your entire visible page right now
+  ========================================== -->
   <main class="hero">
+
+    <!-- ==========================================
+         BADGE (Top pill with logo + name)
+    ========================================== -->
     <div class="badge">
-  <img src="assets/logo.png" alt="Arc Nexus logo">
-  Arc Nexus HQ
-</div>
+      <!-- Logo image -->
+      <img src="assests/assets/logo.png" alt="Arc Nexus logo">
+
+      <!-- Text label -->
+      Arc Nexus HQ
+    </div>
+
+    <!-- ==========================================
+         MAIN HEADLINE
+    ========================================== -->
     <h1>Simple tools for real world problems.</h1>
+
+    <!-- ==========================================
+         DESCRIPTION
+    ========================================== -->
     <p>
       Arc Nexus is a home for practical software tools, experiments, and products built to turn useful ideas into working systems.
     </p>
 
+    <!-- ==========================================
+         PRODUCT CARDS SECTION
+    ========================================== -->
     <section class="cards">
-      
 
+      <!-- ==========================================
+           PHOTO SORTER CARD
+      ========================================== -->
       <div class="card">
-  <div class="card-header">
-    <img src="assets/photogather.png" alt="PhotoGather icon">
-    <h2>Photo Sorter</h2>
-  </div>
-  <p>A lightweight tool for organizing photos by metadata.</p>
-</div>
 
+        <!-- Header: icon + title -->
+        <div class="card-header">
+          <img src="assests/assets/photogather.png" alt="PhotoGather icon">
+          <h2>Photo Sorter</h2>
+        </div>
+
+        <!-- Description -->
+        <p>A lightweight tool for organizing photos by metadata.</p>
+      </div>
+
+      <!-- ==========================================
+           FUTURE PRODUCT CARD
+      ========================================== -->
       <div class="card">
         <h2>Coming soon: MIECES</h2>
         <p>Multimodal ingestion engine and core experimentation system.</p>
       </div>
+
     </section>
   </main>
+
 </body>
 </html>
