@@ -94,7 +94,10 @@ h1 {
   background: #1e293b;
   border: 1px solid #334155;
   border-radius: 18px;
-  padding: 24px;
+  padding: 28px; /* was 24px */
+  cursor: pointer;
+  transition: transform 0.15s ease, border 0.15s ease;
+}
 
   cursor: pointer;
 
@@ -120,8 +123,8 @@ h1 {
 
 /* Card icon */
 .card-header img {
-  width: 36px;
-  height: 36px;
+  width: 48px;
+  height: 48px;
   object-fit: cover; /* Prevent distortion */
   border-radius: 8px;
   flex-shrink: 0;
@@ -131,7 +134,8 @@ h1 {
    CARD TEXT STYLING
 ========================================== */
 .card h2 {
-  margin-top: 0; /* Remove default spacing */
+  margin-top: 0;
+  font-size: 1.4rem;
 }
 
 .card p {
