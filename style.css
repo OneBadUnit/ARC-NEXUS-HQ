@@ -1,6 +1,5 @@
 /* ==========================================
    GLOBAL RESET
-   Ensures consistent box sizing across all elements
 ========================================== */
 * {
   box-sizing: border-box;
@@ -10,54 +9,49 @@
    BODY / BASE STYLING
 ========================================== */
 body {
-  margin: 0; /* Remove default browser margin */
+  margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background: #0f172a; /* Dark navy background */
-  color: #e5e7eb; /* Light text color */
+  background: #0f172a;
+  color: #e5e7eb;
 }
 
 /* ==========================================
    MAIN HERO CONTAINER
-   Centers content and constrains width
 ========================================== */
 .hero {
-  min-height: 100vh; /* Full viewport height */
-  padding: 80px 24px; /* Top/bottom + side spacing */
-  max-width: 1000px; /* Keeps content from stretching too wide */
-  margin: 0 auto; /* Centers horizontally */
+  min-height: 100vh;
+  padding: 80px 24px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 /* ==========================================
-   BADGE (Arc Nexus HQ pill at top)
-   Combined into ONE definition (removed duplicate)
+   BADGE
 ========================================== */
 .badge {
-  display: inline-flex; /* Align icon + text horizontally */
+  display: inline-flex;
   align-items: center;
-  gap: 8px; /* Space between icon and text */
-
+  gap: 8px;
   padding: 8px 14px;
   border: 1px solid #334155;
-  border-radius: 999px; /* Pill shape */
+  border-radius: 999px;
   color: #93c5fd;
-
   margin-bottom: 24px;
 }
 
-/* Badge icon */
 .badge img {
   width: 18px;
   height: 18px;
-  object-fit: cover; /* Prevent stretching */
+  object-fit: cover;
   border-radius: 4px;
-  flex-shrink: 0; /* Prevent shrinking */
+  flex-shrink: 0;
 }
 
 /* ==========================================
    MAIN HEADLINE
 ========================================== */
 h1 {
-  font-size: clamp(2.5rem, 7vw, 5rem); /* Responsive scaling */
+  font-size: clamp(2.5rem, 7vw, 5rem);
   line-height: 1;
   margin: 0 0 24px;
 }
@@ -69,7 +63,7 @@ h1 {
   font-size: 1.25rem;
   line-height: 1.6;
   color: #cbd5e1;
-  max-width: 720px; /* Keeps text readable */
+  max-width: 720px;
 }
 
 /* ==========================================
@@ -77,13 +71,8 @@ h1 {
 ========================================== */
 .cards {
   display: grid;
-
-  /* Responsive layout:
-     - 1 column on small screens
-     - Expands to multiple columns automatically */
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-
-  gap: 18px; /* Space between cards */
+  gap: 18px;
   margin-top: 48px;
 }
 
@@ -94,44 +83,43 @@ h1 {
   background: #1e293b;
   border: 1px solid #334155;
   border-radius: 18px;
-  padding: 28px; /* was 24px */
+  padding: 28px;
   cursor: pointer;
   transition: transform 0.15s ease, border 0.15s ease;
 }
 
-  cursor: pointer;
-
-  /* Smooth hover animation */
-  transition: transform 0.15s ease, border 0.15s ease;
+/* Keeps clickable card links from looking like normal links */
+.card-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
 }
 
-/* Hover effect */
 .card:hover {
-  transform: translateY(-4px); /* Lift effect */
-  border-color: #38bdf8; /* Highlight border */
+  transform: translateY(-4px);
+  border-color: #38bdf8;
 }
 
 /* ==========================================
-   CARD HEADER (icon + title)
+   CARD HEADER
 ========================================== */
 .card-header {
   display: flex;
   align-items: center;
-  gap: 12px; /* Space between icon and title */
+  gap: 12px;
   margin-bottom: 10px;
 }
 
-/* Card icon */
 .card-header img {
   width: 48px;
   height: 48px;
-  object-fit: cover; /* Prevent distortion */
+  object-fit: cover;
   border-radius: 8px;
   flex-shrink: 0;
 }
 
 /* ==========================================
-   CARD TEXT STYLING
+   CARD TEXT
 ========================================== */
 .card h2 {
   margin-top: 0;
@@ -145,7 +133,6 @@ h1 {
 
 /* ==========================================
    GLOBAL IMAGE SAFETY NET
-   Prevents ANY image from blowing up full screen
 ========================================== */
 img {
   max-width: 100%;
