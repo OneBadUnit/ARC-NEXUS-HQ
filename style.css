@@ -27,31 +27,41 @@ body {
 
 /* ==========================================
    BRAND HEADER
-   Centered brand block with image above text
+   Image left, text centered relative to hero
 ========================================== */
 .brand {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 40px;
-  text-align: center;
+  position: relative;
+  margin-bottom: 48px;
+  height: 160px; /* gives space for centering text */
 }
 
+/* Left-aligned image */
 .brand img {
-  width: 196px;
-  height: 196px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 140px;
+  height: 140px;
   object-fit: cover;
   border-radius: 24px;
-  flex-shrink: 0;
+
   box-shadow: 0 0 28px rgba(56, 189, 248, 0.16);
 }
 
+/* Centered brand text */
 .brand span {
-  font-size: 1.6rem;
-  font-weight: 800;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  font-size: 1.8rem;
+  font-weight: 900;
   color: #93c5fd;
   letter-spacing: 0.4px;
+  text-align: center;
 }
 
 /* ==========================================
@@ -117,7 +127,7 @@ h1 {
   margin-bottom: 14px;
 }
 
-/* Vertical product layout for app-style cards */
+/* Vertical product layout */
 .card-header.vertical {
   flex-direction: column;
   align-items: center;
@@ -125,16 +135,15 @@ h1 {
   text-align: center;
 }
 
-/* Default small card icon */
+/* Default icon */
 .card-header img {
   width: 36px;
   height: 36px;
   object-fit: cover;
   border-radius: 8px;
-  flex-shrink: 0;
 }
 
-/* Larger featured product icon */
+/* Large product icon */
 .card-header.vertical img {
   width: 140px;
   height: 140px;
