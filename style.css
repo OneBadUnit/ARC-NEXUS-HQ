@@ -57,7 +57,7 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
 
-  font-size: 3.25rem;
+  font-size: 3.75rem;
   font-weight: 600;
   color: #93c5fd;
   letter-spacing: 0.4px;
@@ -68,7 +68,7 @@ body {
    MAIN HEADLINE
 ========================================== */
 h1 {
-  font-size: clamp(2.0rem, 5.2vw, 3.75rem);
+  font-size: clamp(1.75rem, 4.75vw, 3.0rem);
   line-height: 1;
   margin: 0 0 24px;
 }
