@@ -26,25 +26,29 @@ body {
 }
 
 /* ==========================================
-   BADGE
+   BRAND HEADER
+   Replaces the small generic badge
 ========================================== */
-.badge {
-  display: inline-flex;
+.brand {
+  display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 8px 14px;
-  border: 1px solid #334155;
-  border-radius: 999px;
-  color: #93c5fd;
-  margin-bottom: 24px;
+  gap: 14px;
+  margin-bottom: 32px;
 }
 
-.badge img {
-  width: 18px;
-  height: 18px;
+.brand img {
+  width: 42px;
+  height: 42px;
   object-fit: cover;
-  border-radius: 4px;
+  border-radius: 10px;
   flex-shrink: 0;
+}
+
+.brand span {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #93c5fd;
+  letter-spacing: 0.3px;
 }
 
 /* ==========================================
@@ -71,7 +75,7 @@ h1 {
 ========================================== */
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 18px;
   margin-top: 48px;
 }
@@ -83,12 +87,11 @@ h1 {
   background: #1e293b;
   border: 1px solid #334155;
   border-radius: 18px;
-  padding: 28px;
+  padding: 32px;
   cursor: pointer;
-  transition: transform 0.15s ease, border 0.15s ease;
+  transition: transform 0.15s ease, border 0.15s ease, box-shadow 0.15s ease;
 }
 
-/* Keeps clickable card links from looking like normal links */
 .card-link {
   display: block;
   color: inherit;
@@ -98,6 +101,7 @@ h1 {
 .card:hover {
   transform: translateY(-4px);
   border-color: #38bdf8;
+  box-shadow: 0 0 28px rgba(56, 189, 248, 0.12);
 }
 
 /* ==========================================
@@ -107,9 +111,17 @@ h1 {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 10px;
+  margin-bottom: 14px;
 }
 
+/* Vertical product layout for app-style cards */
+.card-header.vertical {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+/* Default small card icon */
 .card-header img {
   width: 48px;
   height: 48px;
@@ -118,17 +130,32 @@ h1 {
   flex-shrink: 0;
 }
 
+/* Larger featured product icon */
+.card-header.vertical img {
+  width: 112px;
+  height: 112px;
+  border-radius: 20px;
+}
+
 /* ==========================================
    CARD TEXT
 ========================================== */
 .card h2 {
-  margin-top: 0;
+  margin: 0;
   font-size: 1.4rem;
+}
+
+.card-header.vertical h2 {
+  font-size: 2.15rem;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: 0.3px;
 }
 
 .card p {
   color: #cbd5e1;
   line-height: 1.5;
+  margin-bottom: 0;
 }
 
 /* ==========================================
