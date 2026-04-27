@@ -46,6 +46,15 @@ h1 {
 }
 
 .card {
+  cursor: pointer;
+  transition: transform 0.15s ease, border 0.15s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: #38bdf8;
+}
+.card {
   background: #1e293b;
   border: 1px solid #334155;
   border-radius: 18px;
