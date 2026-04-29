@@ -180,3 +180,32 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+/* ==========================================
+   BADGES (FREE / HOT)
+========================================== */
+.badge {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 4px 10px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  border-radius: 999px;
+  letter-spacing: 0.6px;
+  vertical-align: middle;
+}
+
+/* FREE badge - matches your blue theme */
+.badge.free {
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.35);
+}
+
+/* 🔥 badge - subtle, not cartoonish */
+.badge.hot {
+  padding: 0;
+  background: none;
+  border: none;
+  font-size: 1rem;
+}
