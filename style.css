@@ -196,18 +196,7 @@ img {
   vertical-align: middle;
 }
 
-/* FREE badge — small, red, clean */
-.badge.free {
-  padding: 2px 8px;
-  font-size: 0.75rem;   /* smaller */
-  font-weight: 800;
-  border-radius: 999px;
-  letter-spacing: 0.8px;
 
-  color: #fecaca;
-  background: rgba(239, 68, 68, 0.15);
-  border: 1px solid rgba(239, 68, 68, 0.45);
-}
 
 /* 🔥 badge */
 .badge.hot {
