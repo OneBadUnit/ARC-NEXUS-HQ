@@ -27,12 +27,11 @@ body {
 
 /* ==========================================
    BRAND HEADER
-   Image left, text centered relative to hero
 ========================================== */
 .brand {
   position: relative;
   margin-bottom: 48px;
-  height: 160px; /* gives space for centering text */
+  height: 160px;
 }
 
 /* Left-aligned image */
@@ -154,11 +153,14 @@ h1 {
 /* ==========================================
    CARD TEXT
 ========================================== */
+
+/* FIXED: Restore proper heading size */
 .card h2 {
   margin: 0;
-  font-size: 1rem;
+  font-size: 1.4rem;
 }
 
+/* Large product title */
 .card-header.vertical h2 {
   font-size: 2.4rem;
   line-height: 1;
@@ -184,28 +186,33 @@ img {
 /* ==========================================
    BADGES (FREE / HOT)
 ========================================== */
+
+/* Base badge */
 .badge {
-  display: inline-block;
-  margin-left: 10px;
-  padding: 4px 10px;
-  font-size: 0.3rem;
-  font-weight: 300;
-  border-radius: 999px;
-  letter-spacing: 0.6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 8px;
   vertical-align: middle;
 }
 
-/* FREE badge - matches your blue theme */
+/* FREE badge — small, red, clean */
 .badge.free {
-  background: rgba(56, 189, 248, 0.15);
-  color: #38bdf8;
-  border: 1px solid rgba(56, 189, 248, 0.35);
+  padding: 2px 8px;
+  font-size: 0.75rem;   /* smaller */
+  font-weight: 800;
+  border-radius: 999px;
+  letter-spacing: 0.8px;
+
+  color: #fecaca;
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.45);
 }
 
-/* 🔥 badge - subtle, not cartoonish */
+/* 🔥 badge */
 .badge.hot {
   padding: 0;
   background: none;
   border: none;
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
