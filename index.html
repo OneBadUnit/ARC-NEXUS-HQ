@@ -27,25 +27,25 @@
 
     <section class="cards">
 
-      <a class="card card-link" href="https://github.com/OneBadUnit/ARC-NEXUS-HQ/releases"" target="_blank" rel="noopener noreferrer">
+      <button class="card card-button" type="button" data-modal-open="photogather-modal">
         <div class="card-header vertical">
           <img src="assests/assets/photogather.png" alt="PhotoGather icon">
           <h2>Photo Gather</h2>
 
-<div class="free-line">
-  <span class="fire-icon">🔥</span>
-  <span class="free-text">FREE</span>
-  <span class="fire-icon">🔥</span>
-</div>
+          <div class="free-line">
+            <span class="fire-icon">🔥</span>
+            <span class="free-text">FREE</span>
+            <span class="fire-icon">🔥</span>
+          </div>
         </div>
 
         <p>
-          A lightweight tool for finding, collecting, and organizing photos by metadata.<br>
-          <strong>View on GitHub →</strong>
+          Find, copy, and organize photos into a clean folder structure.<br>
+          <strong>Learn More →</strong>
         </p>
-      </a>
+      </button>
 
-      <div class="card">
+      <button class="card card-button" type="button" data-modal-open="nexis-modal">
         <div class="card-header vertical">
           <img src="assests/assets/nexis.png" alt="NEXIS system icon">
           <h2>NEXIS</h2>
@@ -55,10 +55,149 @@
           Turn raw information into usable content in one place.<br>
           <strong>Collect → Convert → Create</strong>
         </p>
-      </div>
+      </button>
 
     </section>
   </main>
+
+  <!-- Photo Gather Modal -->
+  <div class="modal-overlay" id="photogather-modal" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="photogather-title">
+      <button class="modal-close" type="button" data-modal-close>&times;</button>
+
+      <h2 id="photogather-title">Photo Gather</h2>
+      <p class="modal-tag">Free Windows Tool</p>
+
+      <div class="modal-section">
+        <h3>What it does</h3>
+        <p>
+          Photo Gather helps you locate pictures, then copies them into a new folder organized by year, month, and day.
+        </p>
+        <p>
+          It also creates a simple CSV file — best opened in Excel or a similar program — so you can see where each copied photo originally came from.
+        </p>
+        <p>
+          Your original pictures are never deleted or changed.
+        </p>
+      </div>
+
+      <div class="modal-section">
+        <h3>What you download</h3>
+        <p>
+          Photo Gather is a single file you open on Windows. Nothing gets installed on your computer.
+        </p>
+        <p>
+          If you do not want it anymore, just delete the file.
+        </p>
+      </div>
+
+      <div class="modal-section">
+        <h3>What it can access</h3>
+        <p>
+          By default, Photo Gather only looks in normal user folders, such as Pictures.
+        </p>
+        <p>
+          It will not scan your whole computer unless you specifically choose that location.
+        </p>
+      </div>
+
+      <div class="modal-section warning">
+        <h3>Quick safety note</h3>
+        <p>
+          Be careful with any file you download from the internet. Only download from sources you trust, keep antivirus protection active, and do not run anything that feels suspicious.
+        </p>
+      </div>
+
+      <div class="modal-actions">
+        <a class="modal-button" href="https://github.com/OneBadUnit/ARC-NEXUS-HQ/releases" target="_blank" rel="noopener noreferrer">
+          View Download on GitHub
+        </a>
+        <button class="modal-button secondary" type="button" data-modal-close>
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- NEXIS Modal -->
+  <div class="modal-overlay" id="nexis-modal" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="nexis-title">
+      <button class="modal-close" type="button" data-modal-close>&times;</button>
+
+      <h2 id="nexis-title">NEXIS</h2>
+      <p class="modal-tag">In Development</p>
+
+      <div class="modal-section">
+        <h3>What it does</h3>
+        <p>
+          NEXIS is being built to help turn raw information into useful output.
+        </p>
+        <p>
+          The goal is a simple workflow: collect information, convert it into clearer forms, then create useful reports, scripts, articles, or arguments.
+        </p>
+      </div>
+
+      <div class="modal-section">
+        <h3>Current flow</h3>
+        <p>
+          Collect → Convert → Create
+        </p>
+      </div>
+
+      <div class="modal-actions">
+        <button class="modal-button secondary" type="button" data-modal-close>
+          Coming Soon
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const openButtons = document.querySelectorAll("[data-modal-open]");
+    const closeButtons = document.querySelectorAll("[data-modal-close]");
+    const modals = document.querySelectorAll(".modal-overlay");
+
+    openButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const modalId = button.getAttribute("data-modal-open");
+        const modal = document.getElementById(modalId);
+
+        if (modal) {
+          modal.classList.add("active");
+          modal.setAttribute("aria-hidden", "false");
+        }
+      });
+    });
+
+    closeButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const modal = button.closest(".modal-overlay");
+
+        if (modal) {
+          modal.classList.remove("active");
+          modal.setAttribute("aria-hidden", "true");
+        }
+      });
+    });
+
+    modals.forEach((modal) => {
+      modal.addEventListener("click", (event) => {
+        if (event.target === modal) {
+          modal.classList.remove("active");
+          modal.setAttribute("aria-hidden", "true");
+        }
+      });
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        modals.forEach((modal) => {
+          modal.classList.remove("active");
+          modal.setAttribute("aria-hidden", "true");
+        });
+      }
+    });
+  </script>
 </body>
 
 </html>
