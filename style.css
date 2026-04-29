@@ -188,7 +188,7 @@ img {
   display: inline-block;
   margin-left: 10px;
   padding: 4px 10px;
-  font-size: 0.5rem;
+  font-size: 0.3rem;
   font-weight: 300;
   border-radius: 999px;
   letter-spacing: 0.6px;
@@ -207,5 +207,5 @@ img {
   padding: 0;
   background: none;
   border: none;
-  font-size: 2rem;
+  font-size: 1.75rem;
 }
